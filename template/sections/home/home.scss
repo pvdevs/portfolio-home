@@ -1,0 +1,40 @@
+@use '../../base';
+
+.hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 112px 96px;
+  gap: 16px;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: italic;
+    }
+    h1 {
+      font-size: 6rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+  }
+
+  img {
+    width: 48px;
+    animation: 4s spin infinite linear;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
