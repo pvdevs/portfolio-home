@@ -1,11 +1,12 @@
 @use '../../base';
 
 .hero {
+  width: 100%;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: auto 1fr;
-  padding: 112px 96px;
+  padding: 112px 48px;
   gap: 16px;
-  width: 100%;
 
   div {
     display: flex;
@@ -35,6 +36,37 @@
     }
     to {
       transform: rotate(360deg);
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    padding: 112px 32px;
+
+    div {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    padding: 112px 16px;
+
+    div {
+      h1 {
+        font-size: 2.5rem;
+      }
+      h4 {
+        font-size: 1rem;
+      }
+    }
+
+    img {
+      width: 32px;
     }
   }
 }

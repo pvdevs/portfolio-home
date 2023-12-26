@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 48px;
+  width: 100%;
+  box-sizing: border-box;
+
+  img {
+    width: 32px;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: 40px;
+    }
+    ul,
+    li {
+      list-style: none;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    display: none;
+  }
+}
